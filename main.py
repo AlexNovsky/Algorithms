@@ -1,29 +1,44 @@
-array = [3, 5, -4, 8, 11, 1, -1, 6]
-targetSum = 10
+# Finding a pair of numbers in array which summ equal targetSum
+# Solution 1
+# array = [3, 5, -4, 8, 11, 1, -1, 6]
+# targetSum = 10
+#
+# def summarize(array, targetSum):
+#     for i in range(len(array) - 1):
+#         firstNum = array[i]
+#         for j in range(i + 1, len(array)):
+#             secondNum = array[j]
+#             if firstNum + secondNum == targetSum:
+#                 print(firstNum, secondNum)
+#                 return [firstNum, secondNum]
+#     return[]
+#
+# Solution 2
+# def summarize2(array, targetSum):
+#     nums = {}
+#     for num in array:
+#         Match = targetSum - num
+#         if Match in nums:
+#             print(Match, num)
+#             return [Match, num]
+#         else:
+#             nums[num] = True
+#     return []
+#
+# summarize(array, targetSum)
+# summarize2(array, targetSum)
+#
+# Finding a subsiquense
+array = [5, 1, 22, 25, 6, -1, 8, 10]
+sequence = [-1, 1, 3, -1, 12, 10]
 
-def summarize(array, targetSum):
-    for i in range(len(array) - 1):
-        firstNum = array[i]
-        for j in range(i + 1, len(array)):
-            secondNum = array[j]
-            if firstNum + secondNum == targetSum:
-                print(firstNum, secondNum)
-                return [firstNum, secondNum]
-    return[]
+def isValidSubsequence(array, sequence):
+    result = []
+    result = [s for s in array if s in sequence]
+    print(result)
+    return print ("True")
+isValidSubsequence(array, sequence)
 
-def summarize2(array, targetSum):
-    nums = {}
-    for num in array:
-        Match = targetSum - num
-        if Match in nums:
-            print(Match, num)
-            return [Match, num]
-        else:
-            nums[num] = True
-    return []
-
-summarize(array, targetSum)
-summarize2(array, targetSum)
 # Failed versions
 # def summarize():
 #     start_num = 0
